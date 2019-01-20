@@ -21,7 +21,7 @@ public class spider implements Runnable{
 	public void run() {
 		// TODO Auto-generated method stub
 		String name = Thread.currentThread().getName();
-//		System.out.println(name + "´¦Àí" + url);
+//		System.out.println(name + "ï¿½ï¿½ï¿½ï¿½" + url);
 		try {
 			Document doc =  Jsoup.connect(url).get();
 			Elements es =  doc.select(".grid_view .item");
@@ -37,12 +37,14 @@ public class spider implements Runnable{
 			f.num = Integer.parseInt(num.substring(0,num.length() - 3));
 			f.quote = e.select(".inq").first().text();
 //			System.out.println(name + ":" + f);
-			
+			f.url = e.select(".pic a").first().attr("href");
 		
 			list.add(f);
+			
 		
 		}
-//			System.out.println(name + "Íê³É:" + url);
+			System.out.println(list);
+//			System.out.println(name + "ï¿½ï¿½ï¿½:" + url);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

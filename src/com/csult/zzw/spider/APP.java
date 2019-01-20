@@ -14,7 +14,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 /*
- * ³ÌÐòµÄÈë¿Ú
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 public class APP {
 	//alt+/
@@ -38,26 +38,26 @@ public class APP {
 				e.printStackTrace();
 			}
 		}
-//		System.out.println(list.size());
-//		for (Film film : list) {
-//			System.out.println(film.toCSV());
-//		}
-		/*
-		 * Ð´ÈëÎÄ¼þ
-		 */
-		String file = "F:/hithub/film.csv";
-		file = "film.csv";
-		//ÅÅÐò
-		Collections.sort(list);
-		
-		try(FileWriter out = new FileWriter(file)) {
-			for (Film film : list) {
-				out.write(film.toCSV());
-			}
-			System.out.println("OK");
-		} catch (Exception e) {
-			// TODO: handle exception
+		System.out.println(list.size());
+		for (Film film : list) {
+			System.out.println(film.url);
 		}
+		/*
+		 * Ð´ï¿½ï¿½ï¿½Ä¼ï¿½
+		 */
+//		String file = "F:/hithub/film.csv";
+//		file = "film.csv";
+//		//ï¿½ï¿½ï¿½ï¿½
+//		Collections.sort(list);
+//		
+//		try(FileWriter out = new FileWriter(file)) {
+//			for (Film film : list) {
+//				out.write(film.toCSV());
+//			}
+//			System.out.println("OK");
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//		}
 	}
 
 }

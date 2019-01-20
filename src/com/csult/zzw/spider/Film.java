@@ -35,6 +35,11 @@ public class Film implements Comparable<Film>{
 	 * ¶ÌÆÀ
 	 */
 	String quote;
+	/*
+	 * 
+	 * 
+	 */
+	String url;
 	
 	public String toCSV(){
 		return String.format("%d,%s,%d,%.1f\n",
@@ -47,7 +52,7 @@ public class Film implements Comparable<Film>{
 	@Override
 	public String toString() {
 		return "Film [title=" + title + ", info=" + info + ", rating=" + rating + ", num=" + num + ", id=" + id
-				+ ", poster=" + poster + ", quote=" + quote + "]";
+				+ ", poster=" + poster + ", url=" + url + "]";
 	}
 
 	@Override
